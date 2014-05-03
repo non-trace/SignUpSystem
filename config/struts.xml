@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="mydefault" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor-stack name="baseDefaultStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="baseInterceptor" />
+			</interceptor-stack>
+			<interceptor name="baseInterceptor"
+				class="cn.edu.tstc.common.interceptor.ManagerActionInterceptor" />
+		</interceptors>
+		<!-- 定义默认拦截器 -->
+		<default-interceptor-ref name="baseDefaultStack" />
+	</package>
+	<bean type="org.apache.struts2.convention.ActionNameBuilder" name="actionNameBuilder"
+		class="org.apache.struts2.convention.DefaultActionNameBuilder" />
+	<constant name="struts.convention.actionNameBuilder" value="actionNameBuilder" />
+	<constant name="struts.convention.action.suffix" value="Action" />
+	<constant name="struts.convention.package.locators" value="action" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.convention.default.parent.package"
+		value="mydefault" />
+</struts>

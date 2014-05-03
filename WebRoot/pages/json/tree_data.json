@@ -1,0 +1,25 @@
+[{
+		"id":14,
+		"text":"个人信息",
+		"attributes":{
+				"url":"pages/userInfo.jsp"
+			}
+	},{
+		"id":15,
+		"text":"表单",
+		"attributes":{
+				"url":"/test/EasyUI/Form.jsp"
+			}
+	},{
+		"id":16,
+		"text":"文件上传",
+		"attributes":{
+				"url":"/test/fileUpload/testFileUpload.jsp"
+			}
+	},{
+		"id":17,
+		"text":"数据表格",
+		"attributes":{
+				"url":"/test/EasyUI/dataGrid.jsp"
+			}
+	}]
