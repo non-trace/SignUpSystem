@@ -13,18 +13,6 @@ import org.springframework.stereotype.Repository;
 
 import cn.edu.tstc.common.dao.BaseDao;
 import cn.edu.tstc.entity.User;
-
-/**
- * 项目名称：SignUpSystem
- * 类名称：UserDao
- * 类描述:
- * 创建人：姚洪肖   
- * 创建时间：2014-5-3 下午3:51:32   
- * 修改人：姚洪肖  
- * 修改时间：2014-5-3 下午3:51:32    
- * 修改备注：   
- * @version
- */
 @Repository
 public class UserDao extends BaseDao implements IUserDao {
 	@Override
@@ -35,6 +23,7 @@ public class UserDao extends BaseDao implements IUserDao {
 		if (l!=null&&!l.isEmpty()) {
 			Map<String, Object> userMap = l.get(0);
 			User user = new User();
+			user.setUser_id(Integer.parseInt(userMap.get("user_id").toString()));
 			user.setAge(userMap.get("age")==null?0:Integer.parseInt(userMap.get("age").toString()));
 			user.setBirthday(userMap.get("birthday")!=null?new SimpleDateFormat("yyyy-MM-dd").parse(userMap.get("birthday").toString()):new Date());
 			user.setIdcard(userMap.get("idcard")==null?"":userMap.get("idcard").toString());

@@ -73,54 +73,41 @@ $(function(){
 </head>
 
 <body>
-	<table id="dg"></table>
-	<div id="registWin" style= "width: 550">
-		<form id="uiform" method="post">
-				<table>
-					<tr>
-						<td>登录名：</td>
-						<td><input required="true" id="txtUsername" type="text"
-							name="user.user_code" value="${sessionScope._LOGIN_USER_.user_code}" readonly="readonly"/>
-						</td>
-						<td>真实姓名：</td>
-						<td><input id="txtTruename" validType="CHS" required="true"
-							type="text" name="user.user_name" value="${sessionScope._LOGIN_USER_.user_name}"/></td>
-					</tr>
-					<tr>
-						<td>性别：</td>
-						<td><input id="Checkbox1" type="radio" name="user.sex"
-							checked="checked" value="man" /><label>男</label></td>
-						<td><input id="Checkbox2" type="radio" name="user.sex"
-							value="female" /><label>女</label></td>
-	
-					</tr>
-					<tr>
-						<td>出生日期</td>
-						<td><input id="birthday" name="user.birthday" value="${sessionScope._LOGIN_USER_.birthday}"></td>
-						<td>Email：</td>
-						<td><input id="txtEmail" name="user.email" validType="email"
-							type="text" invalidMessage="请输入正确的邮箱格式" value="${sessionScope._LOGIN_USER_.email}"/></td>
-					</tr>
-					<tr>
-						<td>年龄：</td>
-						<td><input validType="number" id="txtZIP0" name="user.age"
-							type="text" value="${sessionScope._LOGIN_USER_.age}"/>
-						</td>
-						<td>身份证号：</td>
-						<td><input validType="idcard" id="txtIdcard" name="user.idcard"
-							type="text" value="${sessionScope._LOGIN_USER_.idcard}"/></td>
-					</tr>
-					<tr>
-						<td>手机：</td>
-						<td><input validType="mobile" id="txtMobile" name="user.mobile"
-							type="text" value="${sessionScope._LOGIN_USER_.mobile}"/></td>
-						<td>电话：</td>
-						<td><input id="txtTel" validType="phone" name="user.tel"
-							type="text" value="${sessionScope._LOGIN_USER_.tel}"/>
-						</td>
-					</tr>
-				</table>
-			</form>
-		</div>
+	<form id="uiform" method="post">
+			<table>
+				<tr>
+					<td>登录名：</td>
+					<td>${sessionScope._LOGIN_USER_.user_code}
+					</td>
+					<td>真实姓名：</td>
+					<td>${sessionScope._LOGIN_USER_.user_name}</td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td>${sessionScope._LOGIN_USER_.sex}</td>
+
+				</tr>
+				<tr>
+					<td>出生日期</td>
+					<td>${sessionScope._LOGIN_USER_.birthday}</td>
+					<td>Email：</td>
+					<td>${sessionScope._LOGIN_USER_.email}</td>
+				</tr>
+				<tr>
+					<td>年龄：</td>
+					<td>
+					${sessionScope._LOGIN_USER_.email}
+					</td>
+					<td>身份证号：</td>
+					<td>${sessionScope._LOGIN_USER_.idcard}</td>
+				</tr>
+				<tr>
+					<td>手机：</td>
+					<td>${sessionScope._LOGIN_USER_.mobile}</td>
+					<td>电话：</td>
+					<td>${sessionScope._LOGIN_USER_.tel}</td>
+				</tr>
+			</table>
+		</form>
 </body>
 </html>

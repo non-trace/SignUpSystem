@@ -6,20 +6,14 @@
 			}
 	},{
 		"id":15,
-		"text":"表单",
+		"text":"选课",
 		"attributes":{
-				"url":"/test/EasyUI/Form.jsp"
+				"url":"/pages/selectClass.jsp"
 			}
 	},{
 		"id":16,
-		"text":"文件上传",
+		"text":"已选课程",
 		"attributes":{
-				"url":"/test/fileUpload/testFileUpload.jsp"
-			}
-	},{
-		"id":17,
-		"text":"数据表格",
-		"attributes":{
-				"url":"/test/EasyUI/dataGrid.jsp"
+				"url":"/pages/selectedClass.jsp"
 			}
 	}]

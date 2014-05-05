@@ -108,6 +108,7 @@ function showLoginWin(){
 						success : function(data) {
 							if ("success"==data) {
 								$('#loginWin').dialog('close');
+								location.reload();
 								$.messager.show({
 									title : '登录信息',
 									msg : '登录成功',
@@ -162,7 +163,7 @@ $(function() {
 
 	$("#tree").tree(treeConfig);
 	$("#tabs").tabs(tabsConfig);
-	addTab("百度", "http://www.baidu.com");
+	addTab("百度", "pages/json/tree_data.json");
 	$('#mb').menubutton({
 		iconCls : 'icon-edit',
 		menu : '#mm'

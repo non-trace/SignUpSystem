@@ -1,12 +1,16 @@
 package cn.edu.tstc.common.action;
 
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -74,5 +78,14 @@ public class BaseAction extends ActionSupport implements ServletRequestAware,
 		} catch (Exception e) {
 			throw e;
 		}
+	}
+	
+	public void setOutGridJson(List l) throws Exception{
+		if (l==null) {
+			l=new ArrayList();
+		}
+		StringBuffer str = new StringBuffer();
+		str.append("{\"total\":").append(l.size()).append(",\"rows\":").append(JSONArray.fromObject(l)).append("}");
+		setOutResponse(str.toString());
 	}
 }
